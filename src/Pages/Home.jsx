@@ -52,7 +52,7 @@ const Home = () => {
 
   const handleExpense = (expense) => {
     if (isNaN(expense.amount) || expense.amount < 0) {
-      toast.error("Please Enter Amount in numbers");
+      toast.error("Please enter your budget");
       return;
     }
     setExpenses((prevExpenses) => [...prevExpenses, expense]);
@@ -70,16 +70,16 @@ const Home = () => {
 
   useEffect(() => {
     if (balance === 0 && totalExpenses > 0 && !alertShown) {
-      toast.success("Paise khatam hai bhai kya kar raha hai!");
+      toast.success("Payissa khatm !");
       setAlertShown(true);
     }else if(balance < 0){
-      toast.success("Account Balance is Zero")
+      toast.success("Your Account Balance is Zero Now !")
     }
   }, [balance]);
 
   const resetBtn = ()=>{
        setBudget(0)
-       toast.success("Account Balance is Zero")
+       toast.success("Your Account Balance is Zero !")
 
        
   }

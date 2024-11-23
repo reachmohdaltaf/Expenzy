@@ -67,6 +67,7 @@ const TopBoard = ({ onBudgetSubmit, resetBtn, budget, today, onExpenseSubmit }) 
                     type="text"
                     className="p-2 bg-gray-100 focus:bg-white"
                     placeholder="Enter Title"
+                    required
                 />
               <h3 className="font-mono text-xl text-zinc-800">Expenses:</h3>
 

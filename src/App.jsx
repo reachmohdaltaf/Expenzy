@@ -1,9 +1,24 @@
 import Home from "./Pages/Home"
 import { Toaster } from 'react-hot-toast';
+import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import About from "./Pages/About";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>
+  },
+  {
+    path: "/About",
+    element: <About/>
+  },
+])
 
 const App = () => {
   return (
     <div className=" w-[100%] h-screen bg-[#537EF8]  flex justify-center">
+          <RouterProvider router={router}>
         <Toaster
   toastOptions={{
     error: {
@@ -43,8 +58,8 @@ const App = () => {
   }}
 />
 
-  
-      <Home/>
+</RouterProvider>
+
     </div>
   )
 }
