@@ -20,7 +20,7 @@
             
             </ul>
             <div className="flex justify-between  item-center p-4">
-            <div className="total bg-[#53f892] w-full h-full p-1  font-bold">total:</div>
+            <div className="total bg-[#53f892] w-full h-full p-1  font-bold">TOTAL:</div>
             <div className="p-1 bg-emerald-800 text-white">${totalExpenses}</div>
 
             </div>
