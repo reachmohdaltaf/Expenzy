@@ -1,5 +1,10 @@
     /* eslint-disable react/prop-types */
 
+    import { GrPowerReset } from "react-icons/gr";
+    import { RiDeleteBin5Fill } from "react-icons/ri";
+
+
+    
     const ExpenseList = ({expenses, resetList, deleteBtnHandler, totalExpenses, today}) => {
     const deleteBtn = (index)=>{
         deleteBtnHandler(index)
@@ -7,14 +12,16 @@
     return (
         <div className="flex justify-center">
         <div className="ExpenseList p-3 bg-white shadow-sm mt-10  w-[70%]">
-          <div className="flex gap-2 items-center justify-between   ">  <h3 className="font-bold">Expense List</h3><button onClick={resetList} className="bg-purple-500 rounded-lg hover:bg-purple-600 active:scale-95 text-white p-2">Reset List</button></div>
+          <div className="flex gap-2 items-center justify-between   ">  <h3 className="font-bold">Expense List</h3><button onClick={resetList} className="bg-purple-500 rounded-lg hover:bg-purple-600 active:scale-95 flex items-center gap-1 text-white p-2">Reset List <GrPowerReset />
+          </button></div>
             <ul className="">
                 {expenses.map((expense, index)=>(
                     <li key={index} className="flex justify-between items-center p-2 border-b border-gray-300">
                     <span className="w-[200px]">{expense.title}</span>
                     <span className="font-bold w-[200px] text-red-500">amount: ${expense.amount}</span>
                     <p>{today}</p>
-                    <button onClick={()=>deleteBtn(index)} className="Delete bg-red-500 p-3 rounded-lg text-white hover:bg-red-600">Delete</button>
+                    <button onClick={()=>deleteBtn(index)} className="Delete bg-red-500 p-3 rounded-lg text-white hover:bg-red-600"><RiDeleteBin5Fill />
+                    </button>
                     </li>  
                 ))}
             
