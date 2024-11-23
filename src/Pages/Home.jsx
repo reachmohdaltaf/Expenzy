@@ -69,7 +69,7 @@ const Home = () => {
   const balance = budget - totalExpenses;
 
   useEffect(() => {
-    if (balance === 0 && totalExpenses > 0 && !alertShown) {
+    if (balance === 0  && totalExpenses > 0 && !alertShown) {
       toast.success("Payissa khatm !");
       setAlertShown(true);
     }else if(balance < 0){
