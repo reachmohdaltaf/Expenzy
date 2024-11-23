@@ -1,13 +1,13 @@
     /* eslint-disable react/prop-types */
 
-    const ExpenseList = ({expenses, deleteBtnHandler, totalExpenses, today}) => {
+    const ExpenseList = ({expenses, resetList, deleteBtnHandler, totalExpenses, today}) => {
     const deleteBtn = (index)=>{
         deleteBtnHandler(index)
     }
     return (
         <div className="flex justify-center">
         <div className="ExpenseList p-3 bg-white shadow-sm mt-10  w-[70%]">
-            <h3 className="font-bold">Expense List</h3>
+          <div className="flex gap-2 items-center justify-between   ">  <h3 className="font-bold">Expense List</h3><button onClick={resetList} className="bg-purple-500 rounded-lg hover:bg-purple-600 active:scale-95 text-white p-2">Reset List</button></div>
             <ul className="">
                 {expenses.map((expense, index)=>(
                     <li key={index} className="flex justify-between items-center p-2 border-b border-gray-300">

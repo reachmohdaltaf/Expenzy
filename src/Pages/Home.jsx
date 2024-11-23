@@ -72,8 +72,6 @@ const Home = () => {
     if (balance === 0  && totalExpenses > 0 && !alertShown) {
       toast.success("Payissa khatm !");
       setAlertShown(true);
-    }else if(balance < 0){
-      toast.success("Your Account Balance is Zero Now !")
     }
   }, [alertShown, balance, totalExpenses]);
 
@@ -81,6 +79,12 @@ const Home = () => {
        setBudget(0)
        toast.success("Your Account Balance is Zero !")
  localStorage.removeItem("budget"); // Remove the budget from localStorage
+  }
+
+  const resetList =()=>{
+    setExpenses([])
+    localStorage.removeItem("expenses"); // Remove the budget from localStorage
+
   }
 
   return (
@@ -92,7 +96,7 @@ const Home = () => {
       <div className="Container p-4">
         <TopBoard resetBtn={resetBtn} today={today} onBudgetSubmit={handleBudget}  onExpenseSubmit={handleExpense} budget={budget} />
         <OutputContainer budget={budget} expenses={expenses} balance={balance} />
-        <ExpenseList totalExpenses={totalExpenses} deleteBtnHandler={deleteBtnHandler} today={today} expenses={expenses} budget={budget} />
+        <ExpenseList resetList={resetList} totalExpenses={totalExpenses} deleteBtnHandler={deleteBtnHandler} today={today} expenses={expenses} budget={budget} />
       </div>
     </div>
   );
