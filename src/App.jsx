@@ -35,7 +35,7 @@ const App = () => {
         primary: "#ffffff", // White icon color
         secondary: "#537EF8", // Black background for the icon
       },
-      duration: 1200, // Custom duration (in milliseconds), e.g., 5000ms = 5 seconds
+      duration: 2000, // Custom duration (in milliseconds), e.g., 5000ms = 5 seconds
     },
     success: {
       style: {
@@ -52,7 +52,7 @@ const App = () => {
         primary: "#ffffff", // White icon color
         secondary: "#537EF8", // Black background for the icon
       },
-      duration: 1200, // Custom duration (in milliseconds), e.g., 5000ms = 5 seconds
+      duration: 2000, // Custom duration (in milliseconds), e.g., 5000ms = 5 seconds
     },
   }}
 />
