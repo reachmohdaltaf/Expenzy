@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar"
 
 const About = () => {
   return (
-      <div className=" relative w-[80%] overflow-y-scroll relative shadow-sm bg-gray-200">
+      <div className="  w-[80%] overflow-y-scroll relative shadow-sm bg-gray-200">
         <div className="sticky top-0"><Navbar/>
         </div>
         <div className="flex p-10  justify-center">
