@@ -56,8 +56,7 @@ const TopBoard = ({ onBudgetSubmit, resetBtn, budget, today, onExpenseSubmit }) 
 
                 />
                 <div className="flex gap-3">
-                <Button value={"+ Add"}/>
-                <button onClick={resetBtn} className="active:scale-95 bg-purple-500 rounded-lg pr-2 pl-2 hover:bg-purple-600 text-white flex items-center ">Reset <GrPowerReset /> </button>
+                <button onClick={resetBtn} className="active:scale-95 bg-purple-500 rounded-lg p-2 hover:bg-purple-600 text-white flex items-center ">Reset <GrPowerReset /> </button>
                 </div>
             </form>
 
