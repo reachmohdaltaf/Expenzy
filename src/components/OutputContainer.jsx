@@ -8,7 +8,7 @@ const OutputContainer = ({budget, expenses, balance}) => {
     <div className="bg-[#537EF8] mt-10 w-[70%] flex justify-between h-fit p-5 text-white">
       <div className="TotalBudget">
         <h3>Total Budget</h3>
-        <p>{budget}</p>
+        <p>${budget}</p>
       </div>
       <div className="Expenses">
         <h3>Expenses</h3>
@@ -16,7 +16,7 @@ const OutputContainer = ({budget, expenses, balance}) => {
       </div>
       <div className="Balance">
         <h3>Balance</h3>
-        <p>{balance}</p>
+        <p>${balance}</p>
       </div>
     </div>
     </div>

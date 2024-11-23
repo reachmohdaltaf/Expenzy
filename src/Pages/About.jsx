@@ -6,10 +6,10 @@ const About = () => {
         <div className="sticky top-0"><Navbar/>
         </div>
         <div className="flex p-10  justify-center">
-        <section className="max-w-4xl mx-auto p-8">
+        <section className="max-w-4xl  p-4">
         <h1 className="text-5xl font-extralight text-center mb-6">About Expense Tracker</h1>
         <p className="text-lg text-gray-700 mb-4">
-          Welcome to the **Expense Tracker**, your go-to solution for managing and tracking your personal finances. 
+          Welcome to the Expense Tracker, your go-to solution for managing and tracking your personal finances. 
           Our app helps you monitor your expenses, categorize them, and stay within your budget.
         </p>
         <p className="text-lg text-gray-700 mb-4">

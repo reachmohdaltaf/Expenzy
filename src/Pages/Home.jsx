@@ -44,8 +44,7 @@ const Home = () => {
 
   const handleBudget = (budget) => {
     if (isNaN(budget.amount) || budget.amount < 0) {
-      toast.error("Please Amount in numbers")
-      return;
+      toast.error(" Enter your new budget !")
     }
     setBudget(Number(budget.amount));
   };
