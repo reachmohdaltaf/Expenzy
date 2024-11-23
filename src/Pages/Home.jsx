@@ -37,7 +37,7 @@ const Home = () => {
   }, [budget]);
 
   useEffect(() => {
-    if (expenses.length > 0) {
+    if (expenses.length >= 0) {
       localStorage.setItem("expenses", JSON.stringify(expenses)); 
     }
   }, [expenses]);

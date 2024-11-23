@@ -18,8 +18,7 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <div className=" w-[100%] h-screen bg-[#537EF8]  flex justify-center">
-          <RouterProvider router={router}>
-        <Toaster
+       <Toaster
   toastOptions={{
     error: {
       style: {
@@ -58,7 +57,10 @@ const App = () => {
   }}
 />
 
-</RouterProvider>
+
+          <RouterProvider router={router}>
+          </RouterProvider>
+       
 
     </div>
   )
