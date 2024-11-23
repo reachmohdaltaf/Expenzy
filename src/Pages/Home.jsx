@@ -52,7 +52,7 @@ const Home = () => {
 
   const handleExpense = (expense) => {
     if (isNaN(expense.amount) || expense.amount < 0) {
-      toast.error("Please enter your budget");
+      toast.error("Please enter a Amount");
       return;
     }
     setExpenses((prevExpenses) => [...prevExpenses, expense]);
