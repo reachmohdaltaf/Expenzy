@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import OutputContainer from "../components/OutputContainer";
 import TopBoard from "../components/TopBoard";
 import toast from "react-hot-toast";
+import ExpenseChart from "../components/ExpenseChart";
 
 
 
@@ -61,6 +62,7 @@ const Home = () => {
   const deleteBtnHandler = (index)=>{
     setExpenses((prevExpenses)=>{
       const updatedExpenses = prevExpenses.filter((_,i)=> i!==index);
+      localStorage.setItem("expenses", JSON.stringify(updatedExpenses)); 
       console.log(updatedExpenses)
       return updatedExpenses;
     })
@@ -84,7 +86,8 @@ const Home = () => {
 
   const resetList =()=>{
     setExpenses([])
-    localStorage.removeItem("expenses"); // Remove the budget from localStorage
+    localStorage.removeItem("expenses"); // Remove the expennses from localStorage
+    toast.success('your Expenses are cleared')
 
   }
 
@@ -98,6 +101,7 @@ const Home = () => {
         <TopBoard resetBtn={resetBtn} today={today} onBudgetSubmit={handleBudget}  onExpenseSubmit={handleExpense} budget={budget} />
         <OutputContainer budget={budget} expenses={expenses} balance={balance} />
         <ExpenseList resetList={resetList} totalExpenses={totalExpenses} deleteBtnHandler={deleteBtnHandler} today={today} expenses={expenses} budget={budget} />
+        {/* <ExpenseChart/> */}
       </div>
     </div>
   );
