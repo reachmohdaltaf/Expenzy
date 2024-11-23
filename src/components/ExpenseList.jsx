@@ -1,6 +1,6 @@
     /* eslint-disable react/prop-types */
 
-    const ExpenseList = ({expenses, deleteBtnHandler, today}) => {
+    const ExpenseList = ({expenses, deleteBtnHandler, totalExpenses, today}) => {
     const deleteBtn = (index)=>{
         deleteBtnHandler(index)
     }
@@ -19,6 +19,12 @@
                 ))}
             
             </ul>
+            <div className="flex justify-between  item-center p-4">
+            <div className="total bg-[#53f892] w-full h-full p-1  font-bold">total:</div>
+            <div className="p-1 bg-emerald-800 text-white">${totalExpenses}</div>
+
+            </div>
+
         </div>
         </div>
     )

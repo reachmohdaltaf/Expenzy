@@ -93,7 +93,7 @@ const Home = () => {
       <div className="Container p-4">
         <TopBoard resetBtn={resetBtn} today={today} onBudgetSubmit={handleBudget}  onExpenseSubmit={handleExpense} budget={budget} />
         <OutputContainer budget={budget} expenses={expenses} balance={balance} />
-        <ExpenseList deleteBtnHandler={deleteBtnHandler} today={today} expenses={expenses} budget={budget} />
+        <ExpenseList totalExpenses={totalExpenses} deleteBtnHandler={deleteBtnHandler} today={today} expenses={expenses} budget={budget} />
       </div>
     </div>
   );
