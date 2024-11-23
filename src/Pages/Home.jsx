@@ -37,7 +37,7 @@ const Home = () => {
   }, [budget]);
 
   useEffect(() => {
-    if (expenses.length >= 0) {
+    if (expenses.length > 0) {
       localStorage.setItem("expenses", JSON.stringify(expenses)); 
     }
   }, [expenses]);
@@ -60,6 +60,7 @@ const Home = () => {
   const deleteBtnHandler = (index)=>{
     setExpenses((prevExpenses)=>{
       const updatedExpenses = prevExpenses.filter((_,i)=> i!==index);
+      console.log(updatedExpenses)
       return updatedExpenses;
     })
   }
@@ -74,7 +75,7 @@ const Home = () => {
     }else if(balance < 0){
       toast.success("Your Account Balance is Zero Now !")
     }
-  }, [balance]);
+  }, [alertShown, balance, totalExpenses]);
 
   const resetBtn = ()=>{
        setBudget(0)
