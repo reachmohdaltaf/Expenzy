@@ -80,8 +80,7 @@ const Home = () => {
   const resetBtn = ()=>{
        setBudget(0)
        toast.success("Your Account Balance is Zero !")
-
-       
+ localStorage.removeItem("budget"); // Remove the budget from localStorage
   }
 
   return (
