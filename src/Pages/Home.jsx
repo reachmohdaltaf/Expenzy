@@ -49,6 +49,9 @@ const Home = () => {
       toast.error(" Enter your new budget !")
     }
     setBudget(Number(budget.amount));
+    {budget.amount? toast.success(`Your budget is ${budget.amount}`) : 
+    toast.success("your budget is reset to 0")}
+
   };
 
   const handleExpense = (expense) => {
@@ -80,7 +83,6 @@ const Home = () => {
 
   const resetBtn = ()=>{
        setBudget(0)
-       toast.success("Your Account Balance is Zero !")
  localStorage.removeItem("budget"); // Remove the budget from localStorage
   }
 
@@ -101,8 +103,8 @@ const Home = () => {
         <TopBoard resetBtn={resetBtn} today={today} onBudgetSubmit={handleBudget}  onExpenseSubmit={handleExpense} budget={budget} />
         <OutputContainer budget={budget} expenses={expenses} balance={balance} />
         <ExpenseList resetList={resetList} totalExpenses={totalExpenses} deleteBtnHandler={deleteBtnHandler} today={today} expenses={expenses} budget={budget} />
-        {/* <ExpenseChart/> */}
-      </div>
+        <ExpenseChart budget={budget} expenses={expenses} />
+        </div>
     </div>
   );
 };
