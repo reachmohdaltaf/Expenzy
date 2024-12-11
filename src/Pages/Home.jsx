@@ -94,7 +94,7 @@ const Home = () => {
   }
 
   return (
-    <div className="w-[80%] overflow-y-scroll relative shadow-sm bg-gray-200">
+    <div className="lg:w-[80%] sm:w-[100%] overflow-y-scroll relative shadow-sm bg-gray-200">
       <div className="sticky top-0">
         <Navbar />
       </div>

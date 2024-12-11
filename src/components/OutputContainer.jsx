@@ -5,7 +5,7 @@ const OutputContainer = ({budget, expenses, balance}) => {
    
   return (
     <div className="flex justify-center">
-    <div className="bg-[#537EF8] mt-10 w-[70%] flex justify-between h-fit p-5 text-white">
+    <div className="bg-[#537EF8] mt-10  lg:w-[70%] flex  justify-between h-fit w-[100%] sm:w-full p-4  lg:p-6  text-white">
       <div className="TotalBudget">
         <h3>Total Budget</h3>
         <p>${budget}</p>

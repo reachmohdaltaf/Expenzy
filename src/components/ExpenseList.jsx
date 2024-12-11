@@ -11,7 +11,7 @@
     }
     return (
         <div className="flex justify-center">
-        <div className="ExpenseList p-3 bg-white shadow-sm mt-10  w-[70%]">
+        <div className="ExpenseList p-3 bg-white shadow-sm mt-10 sm:w-[100%] w-[100%] lg:w-[70%]">
           <div className="flex gap-2 items-center justify-between   ">  <h3 className="font-bold">Expense List</h3><button onClick={resetList} className="bg-purple-500 rounded-lg hover:bg-purple-600 active:scale-95 flex items-center gap-1 text-white p-2">Reset List <GrPowerReset />
           </button></div>
             <ul className="">

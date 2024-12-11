@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import  { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 
 const ExpenseChart = ({ budget, expenses }) => {
@@ -57,9 +57,9 @@ const ExpenseChart = ({ budget, expenses }) => {
   }, [budget, expenses]); // Re-run when budget or expenses change
 
   return (
-       <div className='  mt-10  flex justify-center'>
-    <div className='h-[340px] w-fit border border-black bg-gray-100'>
-      <canvas className='h-full' ref={chartRef}></canvas>
+       <div className='  mt-10 px-20  flex justify-center'>
+    <div className=' h-fit w-screen  border border-black bg-gray-100'>
+      <canvas className=' h-full' ref={chartRef}></canvas>
     </div>
     </div>
    
